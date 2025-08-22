@@ -1,0 +1,6 @@
+print("Hello"[0-len("Hello")])
+print("123" + "345")
+print(123 + 345)
+print(3141.59)
+print(2 == 2)
+print(2 != 2)
