@@ -7,6 +7,7 @@ def my_function():
 my_function()
 
 # Describe the Problem - Write your answers as comments:
+# this is a demo branch
 # 1. What is the for loop doing?
 # 2. When is the function meant to print "You got it"?
 # 3. What are your assumptions about the value of i?
