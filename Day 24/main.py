@@ -1,4 +1,6 @@
 from turtle import Screen
+
+from mail_helper import MailHelper
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
@@ -14,6 +16,7 @@ screen.tracer(0)
 snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
+mail_helper = MailHelper()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -47,3 +50,4 @@ while game_is_on:
             snake.reset()
 
 screen.exitonclick()
+

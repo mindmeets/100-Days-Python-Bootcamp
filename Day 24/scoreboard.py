@@ -1,3 +1,4 @@
+import os
 from turtle import Turtle
 ALIGNMENT = "center"
 FONT = ("Courier", 20, "normal")
@@ -6,7 +7,9 @@ class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        with open("data.txt", "r") as data:
+        # with open("data.txt", "r") as data:
+        # with open(os.path.expanduser("~/Documents/data.txt"), "r") as data:
+        with open(os.path.expanduser("./data.txt"), "r") as data:
             self.high_score = int(data.read())
         self.color("white")
         self.penup()
@@ -25,7 +28,9 @@ class Scoreboard(Turtle):
     def reset(self):
         if self.score > self.high_score:
             self.high_score = self.score
-            with open("data.txt", "w") as data:
+            # with open("/Users/ssaty/Documents/data.txt", "w") as data:
+            # with open(os.path.expanduser("~/Documents/data.txt"), "w") as data:
+            with open(os.path.expanduser("./data.txt"), "w") as data:
                 data.write(f"{self.high_score}")
         self.score = 0
         self.update_scoreboard()
